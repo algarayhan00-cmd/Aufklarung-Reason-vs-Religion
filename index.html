@@ -1,56 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Aufklärung: Akal vs Iman — Game</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aufklärung — Gallery</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<audio id="bgMusic" loop autoplay>
-  <source src="https://cdn.pixabay.com/audio/2023/09/27/audio_2e08b41179.mp3" type="audio/mpeg">
-</audio>
+  <audio id="bgMusic" loop autoplay></audio>
 
-<div class="immersive">
-  <div class="gallery">
-    <div class="frame">
-      <img id="mainPortrait" class="portrait-img" src="images/descartes.png" alt="Portrait" />
-      <div class="canvas-caption">
-        <h2 id="canvasName">René Descartes</h2>
-        <p id="canvasQuote">"Cogito, ergo sum"</p>
+  <div class="immersive">
+    <div class="gallery">
+      <div class="frame">
+        <img id="mainPortrait" class="portrait-img" src="images/descartes.jpg" alt="Portrait" />
+        <div class="canvas-caption">
+          <h2 id="canvasName">René Descartes</h2>
+          <p id="canvasQuote">"Cogito, ergo sum"</p>
+        </div>
+        <div class="controls">
+          <button id="prevBtn" class="ctrl-btn">⟨ Prev</button>
+          <button id="nextBtn" class="ctrl-btn">Next ⟩</button>
+        </div>
       </div>
-      <div class="controls">
-        <button id="prevBtn" class="ctrl-btn">⟨ Prev</button>
-        <button id="nextBtn" class="ctrl-btn">Next ⟩</button>
+    </div>
+
+    <div class="panel">
+      <div class="meta">
+        <img id="miniPortrait" class="mini-portrait" src="images/descartes.jpg" />
+        <div>
+          <h3 class="title">Philosopher Dialogue Simulator</h3>
+          <div class="subtitle">Aufklärung — Reason vs Faith</div>
+        </div>
+      </div>
+
+      <div class="dialog">
+        <div class="question" id="question">René Descartes menatapmu tajam. “Menurutmu, kebenaran berasal dari mana?”</div>
+        <div class="choices" id="choices"></div>
+        <div class="progress" id="progress">Scene 1 / 5</div>
       </div>
     </div>
   </div>
 
-  <div class="panel">
-    <div class="meta">
-      <img id="miniPortrait" class="mini-portrait" src="images/descartes.png" />
-      <div>
-        <h3 class="title">Philosopher Dialogue Simulator</h3>
-        <div class="subtitle">Aufklärung — Reason vs Faith</div>
-      </div>
-    </div>
-
-    <div class="dialog">
-      <div class="question" id="question">René Descartes menatapmu tajam. “Menurutmu, kebenaran berasal dari mana?”</div>
-      <div class="choices" id="choices"></div>
-      <div class="progress" id="progress">Scene 1 / 5</div>
+  <div class="result-overlay" id="resultOverlay">
+    <div class="result-card">
+      <h2 id="resultTitle">Hasil</h2>
+      <p id="resultDesc"></p>
+      <button class="restart-btn" id="restartBtn">Main Lagi</button>
     </div>
   </div>
-</div>
 
-<div class="result-overlay" id="resultOverlay">
-  <div class="result-card">
-    <h2 id="resultTitle">Hasil</h2>
-    <p id="resultDesc"></p>
-    <button class="restart-btn" id="restartBtn">Main Lagi</button>
-  </div>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
